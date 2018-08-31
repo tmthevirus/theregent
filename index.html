@@ -109,9 +109,9 @@
 	<div class="menu trans_500">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+			<div class="logo menu_logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
 			<ul>
-				<li class="menu_item"><a href="#">home</a></li>
+				<li class="menu_item"><a href="index.html">home</a></li>
 				<li class="menu_item"><a href="about.html">about us</a></li>
 				<li class="menu_item"><a href="offers.html">offers</a></li>
 				<li class="menu_item"><a href="blog.html">news</a></li>
@@ -246,14 +246,14 @@
 					<!-- Search Panel -->
 
 					<div class="search_panel active">
-						<form method="post" action="booking.html" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form method="get"  action="booking.php" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							<div class="search_item">
 								<div>check in</div>
-								<input type="date" class="check_in search_input" placeholder="YYYY-MM-DD">
+								<input name="check_in_date" id="check_in_date" type="date" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
 							<div class="search_item">
 								<div>check out</div>
-								<input type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
+								<input name="check_out_date" it="check_out_date" type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
 							</div>
 							<!--<div class="search_item">
 								<div>adults</div>
@@ -265,11 +265,11 @@
 							</div>-->
 							<div class="search_item">
 								<div>Type</div>
-								<select name="children" id="children_1" class="dropdown_item_select search_input">
-									<option>Single Bedroom</option>
-									<option>Double Bedroom</option>
-									<option>2 King size Bedroom</option>
-									<option>Family Room</option>
+								<select name="room_type" id="room_type" class="dropdown_item_select search_input">
+									<option value="room_single">Single Bedroom</option>
+									<option value="romm_double">Double Bedroom</option>
+									<option value="room_2queen">2 Queen size Bedroom</option>
+									<option value="room_family">Family Room</option>
 								</select>
 							</div>
 							<button class="button search_button">book now<span></span><span></span><span></span></button>

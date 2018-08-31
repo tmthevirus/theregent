@@ -57,11 +57,11 @@
                 <div class="row">
                     <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
                         <div class="logo_container">
-                            <div class="logo"><a href="#"><img src="images/logo.png" alt="">THE REGENT COUNTRY CLUB</a></div>
+                            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="">THE REGENT COUNTRY CLUB</a></div>
                         </div>
                         <div class="main_nav_container ml-auto">
                             <ul class="main_nav_list">
-                                <li class="main_nav_item"><a href="#">home</a></li>
+                                <li class="main_nav_item"><a href="index.html">home</a></li>
                                 <li class="main_nav_item"><a href="about.html">about us</a></li>
                                 <!--<li class="main_nav_item"><a href="offers.html">offers</a></li>
                                 <li class="main_nav_item"><a href="blog.html">news</a></li>-->
@@ -109,9 +109,9 @@
     <div class="menu trans_500">
         <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
             <div class="menu_close_container"><div class="menu_close"></div></div>
-            <div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+            <div class="logo menu_logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
             <ul>
-                <li class="menu_item"><a href="#">home</a></li>
+                <li class="menu_item"><a href="index.html">home</a></li>
                 <li class="menu_item"><a href="about.html">about us</a></li>
                 <li class="menu_item"><a href="offers.html">offers</a></li>
                 <li class="menu_item"><a href="blog.html">news</a></li>
@@ -127,26 +127,26 @@
             <div class="container">
 
 
-                <form>
-                    <input style="margin: 10px;width: 300px" type="date" class="check_in search_input" placeholder="YYYY-MM-DD">
-                    <input style="margin: 10px;width: 300px" type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
-                    <select style="margin: 10px;width: 300px" name="children" id="children_1" class="dropdown_item_select search_input">
-                        <option>Single Bedroom</option>
-                        <option>Double Bedroom</option>
-                        <option>2 King size Bedroom</option>
-                        <option>Family Room</option>
+                <form method="get" action="php/room_booking.php">
+                    <input name="check_in_date" id="check_in_date" style="margin: 10px;width: 300px" type="date" class="check_in search_input" placeholder="YYYY-MM-DD" value="<?php echo @$_GET["check_in_date"];?>">
+                    <input name="check_out_date" id="check_out_date" style="margin: 10px;width: 300px" type="date" class="check_out search_input" placeholder="YYYY-MM-DD" value="<?php echo @$_GET["check_out_date"];?>">
+                    <select style="margin: 10px;width: 300px" name="room_type" id="room_type" class="dropdown_item_select search_input">
+                        <option value="room_single">Single Bedroom</option>
+                        <option value="room_double">Double Bedroom</option>
+                        <option value="room_2queen">2 Queen size Bedroom</option>
+                        <option value="room_family">Family Room</option>
                     </select>
                     <br>
 
-                    <input style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="First Name">
-                    <input style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Last Name">
-                    <input style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="NIC Number">
-                    <input style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Phone Number">
-                    <input style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Email">
+                    <input name="f_name" id="f_name" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="First Name">
+                    <input name="l_name" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Last Name">
+                    <input name="nic" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="NIC Number">
+                    <input name="p_no" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Phone Number">
+                    <input name="email" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Email">
 
                     <br>
                     <button class="button search_button">book now<span></span><span></span><span></span></button>
-                </form>w
+                </form>
 
 
             </div>

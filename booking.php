@@ -131,10 +131,10 @@
                     <input name="check_in_date" id="check_in_date" style="margin: 10px;width: 300px" type="date" class="check_in search_input" placeholder="YYYY-MM-DD" value="<?php echo @$_GET["check_in_date"];?>">
                     <input name="check_out_date" id="check_out_date" style="margin: 10px;width: 300px" type="date" class="check_out search_input" placeholder="YYYY-MM-DD" value="<?php echo @$_GET["check_out_date"];?>">
                     <select style="margin: 10px;width: 300px" name="room_type" id="room_type" class="dropdown_item_select search_input">
-                        <option value="room_single">Single Bedroom</option>
-                        <option value="room_double">Double Bedroom</option>
-                        <option value="room_2queen">2 Queen size Bedroom</option>
-                        <option value="room_family">Family Room</option>
+                        <option value="room_single">Deluxe</option>
+                        <option value="romm_double">Supreme</option>
+                        <option value="room_2queen">Honeymoon</option>
+                        <option value="room_family">Premier</option>
                     </select>
                     <br>
 

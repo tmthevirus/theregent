@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+	<?php
+
+    include "php/room_price.php";
+
+    ?>
+
 <title>THE REGENT COUNTRY CLUB</title>
 	<link rel="shortcut icon" href="/images/logo_title.png" />
 <meta charset="utf-8">
@@ -109,9 +116,9 @@
 	<div class="menu trans_500">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<div class="logo menu_logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+			<div class="logo menu_logo"><a href="index.php"><img src="images/logo.png" alt=""></a></div>
 			<ul>
-				<li class="menu_item"><a href="index.html">home</a></li>
+				<li class="menu_item"><a href="index.php">home</a></li>
 				<li class="menu_item"><a href="about.html">about us</a></li>
 				<li class="menu_item"><a href="offers.html">offers</a></li>
 				<li class="menu_item"><a href="blog.html">news</a></li>
@@ -266,10 +273,10 @@
 							<div class="search_item">
 								<div>Type</div>
 								<select name="room_type" id="room_type" class="dropdown_item_select search_input">
-									<option value="room_single">Deluxe</option>
-									<option value="romm_double">Supreme</option>
-									<option value="room_2queen">Honeymoon</option>
-									<option value="room_family">Premier</option>
+                                    <option value="Deluxe">Deluxe</option>
+                                    <option value="Supreme">Supreme</option>
+                                    <option value="Honeymoon">Honeymoon</option>
+                                    <option value="Premier">Premier</option>
 								</select>
 							</div>
 							<button class="button search_button">book now<span></span><span></span><span></span></button>
@@ -279,11 +286,21 @@
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form method="get" action="hall_booking.php" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							<div class="search_item">
 								<div>Date</div>
-								<input type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
+								<input name="check_in_date" type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
 							</div>
+
+                            <div class="search_item">
+                                <div>Hall Type</div>
+                                <select style="margin: 10px;width: 300px" name="hall_type" id="hall_type" class="dropdown_item_select search_input">
+                                    <option value="hallA">Deluxe</option>
+                                    <option value="hallB">Supreme</option>
+                                    <option value="hallC">Honeymoon</option>
+                                </select>
+                            </div>
+
 
 							<button class="button search_button">book now<span></span><span></span><span></span></button>
 						</form>
@@ -325,7 +342,7 @@
 							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
 								<h1>Crown Banquet Hall</h1>
-								<div class="intro_price">From Rs.0000.00</div>
+								<div class="intro_price">From Rs.<?php hall_price("'hallA'"); ?>.00</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -350,7 +367,7 @@
 							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
 								<h1>Grand Ball Room</h1>
-								<div class="intro_price">From Rs. 0000.00</div>
+								<div class="intro_price">From Rs. <?php hall_price("'hallB'"); ?>.00</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -375,7 +392,7 @@
 							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
 								<h1>Duke Banquet Hall</h1>
-								<div class="intro_price">From Rs. 0000.00</div>
+								<div class="intro_price">From Rs. <?php hall_price("'hallC'"); ?>.00</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -519,7 +536,7 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">Rs.16000.00<span>per night</span></div>
+									<div class="offers_price">Rs.<?php room_price("'Deluxe'"); ?><span>per night</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -556,7 +573,7 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">Rs.20000.00<span>per night</span></div>
+									<div class="offers_price">Rs.<?php room_price("'Supreme'"); ?>.00<span>per night</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -593,7 +610,7 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">Rs.15000.00<span>per night</span></div>
+									<div class="offers_price">Rs.<?php room_price("'Honeymoon'"); ?>.00<span>per night</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -630,7 +647,7 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">Rs.25000.00<span>per night</span></div>
+									<div class="offers_price">Rs.<?php room_price("'Premier'"); ?>.00<span>per night</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>

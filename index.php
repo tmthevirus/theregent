@@ -10,17 +10,20 @@
 
 <title>THE REGENT COUNTRY CLUB</title>
 	<link rel="shortcut icon" href="/images/logo_title.png" />
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Travelix Project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travelix Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+    <script src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -256,11 +259,11 @@
 						<form method="get"  action="booking.php" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							<div class="search_item">
 								<div>check in</div>
-								<input name="check_in_date" id="check_in_date" type="date" class="check_in search_input" placeholder="YYYY-MM-DD">
+								<input name="check_in_date" id="check_in_date" type="date" onchange="check_in_date_check()" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
 							<div class="search_item">
 								<div>check out</div>
-								<input name="check_out_date" it="check_out_date" type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
+								<input name="check_out_date" id="check_out_date" type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
 							</div>
 							<!--<div class="search_item">
 								<div>adults</div>
@@ -289,15 +292,15 @@
 						<form method="get" action="hall_booking.php" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							<div class="search_item">
 								<div>Date</div>
-								<input name="check_in_date" type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
+								<input name="check_in_date" id="check_in_date" onchange="check_in_date_check()" type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
 							</div>
 
                             <div class="search_item">
                                 <div>Hall Type</div>
                                 <select style="margin: 10px;width: 300px" name="hall_type" id="hall_type" class="dropdown_item_select search_input">
-                                    <option value="hallA">Deluxe</option>
-                                    <option value="hallB">Supreme</option>
-                                    <option value="hallC">Honeymoon</option>
+                                    <option value="hallA">Crown Banquet Hall</option>
+                                    <option value="hallB">Grand Ball Room</option>
+                                    <option value="hallC">Duke Banquet Hall</option>
                                 </select>
                             </div>
 
@@ -969,11 +972,11 @@
 				<div class="col-lg-7">
 					<div class="contact_form_container">
 						<div class="contact_title">get in touch</div>
-						<form action="#" id="contact_form" class="contact_form">
-							<input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
-							<input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
-							<input type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
-							<textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
+						<form method="post" action="php/contact_us.php" id="contact_form" class="contact_form">
+							<input type="text" id="contact_form_name" name="name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
+							<input type="text" id="contact_form_email" name="email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
+							<input type="text" id="contact_form_subject" name="subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
+							<textarea id="contact_form_message" dirname="message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
 							<button type="submit" id="form_submit_button" class="form_submit_button button">send message<span></span><span></span><span></span></button>
 						</form>
 					</div>

@@ -21,7 +21,9 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <script src="js/main.js"></script>
 </head>
+
 
 <body>
 
@@ -134,9 +136,9 @@
             <div class="container">
 
 
-                <form method="get" action="php/room_booking.php">
-                    <input name="check_in_date" id="check_in_date" style="margin: 10px;width: 300px" type="date" class="check_in search_input" placeholder="YYYY-MM-DD" value="<?php echo @$_GET["check_in_date"];?>">
-                    <input name="check_out_date" id="check_out_date" style="margin: 10px;width: 300px" type="date" class="check_out search_input" placeholder="YYYY-MM-DD" value="<?php echo @$_GET["check_out_date"];?>">
+                <form method="post" action="php/room_booking.php">
+                    <input required name="check_in_date" id="check_in_date" onchange="check_in_date_check()" style="margin: 10px;width: 300px" type="date" class="check_in search_input" placeholder="YYYY-MM-DD" value="<?php echo @$_GET["check_in_date"];?>">
+                    <input required name="check_out_date" id="check_out_date" onchange="check_out_date_check()" style="margin: 10px;width: 300px" type="date" class="check_out search_input" placeholder="YYYY-MM-DD" value="<?php echo @$_GET["check_out_date"];?>">
                     <select style="margin: 10px;width: 300px" name="room_type" id="room_type" class="dropdown_item_select search_input">
                         <option value="Deluxe">Deluxe</option>
                         <option value="Supreme">Supreme</option>
@@ -145,18 +147,18 @@
                     </select>
                     <br>
 
-                    <select style="margin: 10px;width: 300px" name="cus_tite" id="cus_title" class="dropdown_item_select search_input">
+                    <select style="margin: 10px;width: 300px" name="cus_title" id="cus_title" class="dropdown_item_select search_input">
                         <option value="Mr">Mr.</option>
                         <option value="Mrs">Mrs.</option>
                         <option value="Miss">Miss</option>
 
                     </select>
 
-                    <input name="f_name" id="f_name" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="First Name">
-                    <input name="l_name" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Last Name">
-                    <input name="nic" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="NIC Number">
-                    <input name="p_no" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Phone Number">
-                    <input name="email" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Email">
+                    <input required name="f_name" id="f_name" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="First Name">
+                    <input required name="l_name" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Last Name">
+                    <input required name="nic" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="NIC Number">
+                    <input required name="p_no" style="margin: 10px;width: 500px" type="text" class="check_in search_input" placeholder="Phone Number">
+                    <input required name="email" style="margin: 10px;width: 500px" type="email" class="check_in search_input" placeholder="Email">
 
                     <br>
                     <button class="button search_button">book now<span></span><span></span><span></span></button>

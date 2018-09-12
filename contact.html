@@ -135,10 +135,10 @@
 					<!-- Contact Form -->
 					<div class="contact_form_container">
 						<div class="contact_title text-center">get in touch</div>
-						<form action="#" id="contact_form" class="contact_form text-center">
-							<input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
-							<input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
-							<input type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
+						<form method="post" action="php/contact_us.php" id="contact_form" class="contact_form text-center">
+							<input type="text" id="contact_form_name" name="name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
+							<input type="text" id="contact_form_email" name="email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
+							<input type="text" id="contact_form_subject" name="subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
 							<textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
 							<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">send message<span></span><span></span><span></span></button>
 						</form>
@@ -169,9 +169,9 @@
 
 					<div class="about_content">
 						<div class="logo_container about_logo">
-							<div class="logo"><a href="#"><img src="images/logo.png" alt="">travelix</a></div>
+							<div class="logo"><a href="#"><img src="images/logo.png" alt="">THE REGENT COUNTRY CLUB<br></a></div>
 						</div>
-						<p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula iaculis consequat nisl. Nunc et suscipit urna pretium.</p>
+						<p class="about_text">Please be in touch with any questions about upcoming events, membership rates or club facilities.</p>
 						<ul class="about_social_list">
 							<li class="about_social_item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
 							<li class="about_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -191,19 +191,19 @@
 						<ul class="contact_info_list">
 							<li class="contact_info_item d-flex flex-row">
 								<div><div class="contact_info_icon"><img src="images/placeholder.svg" alt=""></div></div>
-								<div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+								<div class="contact_info_text">21st Lane, Isurupura Mawatha, Malabe, Sri Lanka. 10115</div>
 							</li>
 							<li class="contact_info_item d-flex flex-row">
 								<div><div class="contact_info_icon"><img src="images/phone-call.svg" alt=""></div></div>
-								<div class="contact_info_text">2556-808-8613</div>
+								<div class="contact_info_text">+94 11 777 777 0</div>
 							</li>
 							<li class="contact_info_item d-flex flex-row">
 								<div><div class="contact_info_icon"><img src="images/message.svg" alt=""></div></div>
-								<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">contactme@gmail.com</a></div>
+								<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">inquiries@theregent.lk</a></div>
 							</li>
 							<li class="contact_info_item d-flex flex-row">
 								<div><div class="contact_info_icon"><img src="images/planet-earth.svg" alt=""></div></div>
-								<div class="contact_info_text"><a href="https://colorlib.com">www.colorlib.com</a></div>
+								<div class="contact_info_text"><a href="https://colorlib.com">www.theregent.com</a></div>
 							</li>
 						</ul>
 					</div>
@@ -235,7 +235,7 @@
 					<div class="footer_col">
 						<div class="footer_content footer_about">
 							<div class="logo_container footer_logo">
-								<div class="logo"><a href="#"><img src="images/logo.png" alt=""><br>THE REGENT COUNTRY CLUB<br></a></div>
+								<div class="logo"><a href="index.php"><img src="images/logo.png" alt=""><br>THE REGENT COUNTRY CLUB<br></a></div>
 							</div>
 							<p class="footer_about_text"><br>Please be in touch with any questions about upcoming events, membership rates or club facilities.</p>
 							<ul class="footer_social_list">

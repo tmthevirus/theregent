@@ -51,10 +51,10 @@
 								<li class="social_list_item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>-->
 							</ul>
 						</div>
-						<div class="user_box ml-auto">
+						<!--<div class="user_box ml-auto">
 							<div class="user_box_login user_box_link"><a href="#">login</a></div>
 							<div class="user_box_register user_box_link"><a href="#">register</a></div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>		
